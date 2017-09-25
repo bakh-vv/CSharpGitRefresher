@@ -39,6 +39,24 @@ cried";
             string s = "Hello Extension Methods";
             int i = s.WordCount();
 
+            A a = new A();
+            B b = new B();
+            C c = new C();
+
+            a.MethodA(1);           // Extension.MethodA(object, int)
+            a.MethodA("hello");     // Extension.MethodA(object, string)
+
+            a.MethodB();            // A.MethodB()
+
+            b.MethodA(1);           // B.MethodA(int)
+            b.MethodB();            // B.MethodB()
+
+            b.MethodA("hello");     // Extension.MethodA(object, string)
+
+            c.MethodA(1);           // C.MethodA(object)
+            c.MethodA("hello");     // C.MethodA(object)
+            c.MethodB();            // C.MethodB()
+
             Console.WriteLine(i);
             Console.ReadLine();
         }
