@@ -31,12 +31,16 @@ cried";
 
             // Arithmetic is straightforward
             Console.WriteLine(i1 + i2 - i1 * 3 / 7); // => 3
-            Console.WriteLine(bazString);
-            Console.ReadLine();
+
 
             //Change Git
             //Change 2
-            
+
+            string s = "Hello Extension Methods";
+            int i = s.WordCount();
+
+            Console.WriteLine(i);
+            Console.ReadLine();
         }
     }
 }
