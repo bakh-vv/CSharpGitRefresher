@@ -57,6 +57,9 @@ cried";
             c.MethodA("hello");     // C.MethodA(object)
             c.MethodB();            // C.MethodB()
 
+            int? nullable = null; // short hand for Nullable<int>
+            Console.WriteLine("Nullable variable: " + nullable);
+
             Console.WriteLine(i);
             Console.ReadLine();
         }
