@@ -69,6 +69,23 @@ cried";
             handler("Hello World");
             MethodWithCallback(1, 2, handler);
 
+            MethodClass obj = new MethodClass();
+
+            Del d0 = obj.Method1;
+            d0 += obj.Method2;
+            d0 += DelegateMethod;
+
+            Del d1 = obj.Method1;
+            Del d2 = obj.Method2;
+            Del d3 = DelegateMethod;
+
+            Del allMethodsDelegate = d1 + d2;
+            allMethodsDelegate += d3;
+
+            allMethodsDelegate -= d1;
+            Del oneMethodDelegate = allMethodsDelegate - d2;
+
+
             Console.WriteLine(i);
             Console.ReadLine();
         }
