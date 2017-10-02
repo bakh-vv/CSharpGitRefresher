@@ -11,6 +11,7 @@ namespace CSharpBriefer
     {
         public delegate void Del(string message);
         delegate void DelAn(int x);
+        delegate int DelInt(int i);
 
         static void Main(string[] args)
         {
@@ -88,6 +89,16 @@ cried";
 
             DelAn d = delegate (int k) { Console.WriteLine("The number is " + k); };
             d(5);
+
+            DelInt myDelegate = x => x * x;  
+            int j = myDelegate(5); //j = 25  
+
+            Del testDel = n => {
+                string st = n + " World";
+                Console.WriteLine(st);
+            };
+
+            testDel("Hello");
 
             Console.WriteLine(i);
             Console.ReadLine();
