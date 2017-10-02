@@ -87,12 +87,15 @@ cried";
             allMethodsDelegate -= d1;
             Del oneMethodDelegate = allMethodsDelegate - d2;
 
+            //An anonymous method
             DelAn d = delegate (int k) { Console.WriteLine("The number is " + k); };
             d(5);
 
+            //Expression lambda
             DelInt myDelegate = x => x * x;  
             int j = myDelegate(5); //j = 25  
 
+            //Statement lambda
             Del testDel = n => {
                 string st = n + " World";
                 Console.WriteLine(st);
