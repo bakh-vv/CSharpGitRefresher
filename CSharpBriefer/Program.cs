@@ -9,6 +9,8 @@ namespace CSharpBriefer
 
     class Program
     {
+        public delegate void Del(string message);
+
         static void Main(string[] args)
         {
             Console.WriteLine(
@@ -60,8 +62,18 @@ cried";
             int? nullable = null; // short hand for Nullable<int>
             Console.WriteLine("Nullable variable: " + nullable);
 
+            // Instantiate the delegate.
+            Del handler = DelegateMethod;
+
+            // Call the delegate.
+            handler("Hello World");
+
             Console.WriteLine(i);
             Console.ReadLine();
+        }
+    public static void DelegateMethod(string message)
+        {
+            Console.WriteLine(message);
         }
     }
 }
