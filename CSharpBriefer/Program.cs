@@ -10,6 +10,7 @@ namespace CSharpBriefer
     class Program
     {
         public delegate void Del(string message);
+        delegate void DelAn(int x);
 
         static void Main(string[] args)
         {
@@ -85,6 +86,8 @@ cried";
             allMethodsDelegate -= d1;
             Del oneMethodDelegate = allMethodsDelegate - d2;
 
+            DelAn d = delegate (int k) { Console.WriteLine("The number is " + k); };
+            d(5);
 
             Console.WriteLine(i);
             Console.ReadLine();
